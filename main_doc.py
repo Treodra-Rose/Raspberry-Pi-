@@ -12,7 +12,7 @@ replies =  [("Y", (0, 255, 0)), ("N", (255, 0, 0)), ("M", (0, 0, 255))]
 if y > 2 or x > 2 or z > 2:
  sense.show_message("Hi beautiful!")
  reply, colour = choice(replies)
- sense.show_message(reply)
+ sense.show_message(reply, text_colour = colour)
 
 else:
  sense.set_pixel(0, 0, 255, 0, 0)
