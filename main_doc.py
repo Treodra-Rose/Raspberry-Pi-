@@ -11,9 +11,9 @@ replies =  [("Y", (0, 255, 0)), ("N", (255, 0, 0)), ("M", (0, 0, 255))]
 
 while True: 
     acceleration = sense.get_accelerometer_raw()
-    y = acceleration["y"].values
-    z = acceleration["z"].values
-    x = acceleration["x"].values
+    y = abs(acceleration["y"].values)
+    z = abs(acceleration["z"].values)
+    x = abs(acceleration["x"].values)
 
     if y > 2 or x > 2 or z > 2:
         sense.show_message("Hi beautiful!")
